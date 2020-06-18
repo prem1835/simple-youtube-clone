@@ -12,15 +12,19 @@ class SearchBar extends Component {
   };
   render() {
     return (
-      <div className="search-bar ui segment">
-        <form className="ui form" onSubmit={this.onFormSubmit}>
-          <div className="field">
-            <label>Video Search</label>
+      <div className="ui segment menu stackable">
+        <div className="header item ui red label">
+          <i className="video play icon big"></i>V Browser
+        </div>
+        <form className="ui form item mar" onSubmit={this.onFormSubmit}>
+          <div className="field ui fluid icon input">
             <input
               type="text"
               value={this.state.term}
               onChange={this.onInputChange}
+              placeholder="Video Search"
             />
+            <i className="search icon"></i>
           </div>
         </form>
       </div>

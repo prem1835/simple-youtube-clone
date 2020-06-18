@@ -4,8 +4,10 @@ import youtube from "../apis/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 
-const KEY = "AIzaSyDhkpPrVpCvaRN1aPruH0e9yNBGgk2p06U";
+const KEY = "AIzaSyAo-xk9f-V9QDwX3rLA7xDHgdKsd_xX4R4";
 
+// AIzaSyAo-xk9f-V9QDwX3rLA7xDHgdKsd_xX4R4
+// AIzaSyB4e-fshuTUw6cbN2kdmTeIkjTQv8hBZuE
 class App extends Component {
   state = { videos: [], selectedVideo: null };
 
@@ -19,7 +21,7 @@ class App extends Component {
         q: term,
         part: "snippet",
         type: "video",
-        maxResults: 5,
+        maxResults: 6,
         key: KEY,
       },
     });
@@ -36,12 +38,12 @@ class App extends Component {
     return (
       <div className="ui container">
         <SearchBar onFormSubmit={this.onTermSubmit} />
-        <div className="ui grid">
+        <div className="ui stackable grid">
           <div className="ui row">
-            <div className="eleven wide column">
+            <div className="ten wide column">
               <VideoDetail video={this.state.selectedVideo} />
             </div>
-            <div className="five wide column">
+            <div className="six wide column">
               <VideoList
                 videos={this.state.videos}
                 onVideoSelect={this.onVideoSelect}

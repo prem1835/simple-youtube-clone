@@ -7,3 +7,12 @@
 .video-item.item img {
   max-width: 180px;
 }
+
+.flex-center {
+  height: 56vh;
+}
+
+.mar {
+  margin: auto !important;
+  width: 70% !important;
+}
