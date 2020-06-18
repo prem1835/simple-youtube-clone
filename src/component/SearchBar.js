@@ -5,6 +5,7 @@ class SearchBar extends Component {
   state = { term: "" };
   onInputChange = (e) => {
     this.setState({ term: e.target.value });
+    e.target.blur();
   };
   onFormSubmit = (e) => {
     e.preventDefault();
