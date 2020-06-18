@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import "./VideoItem.css";
 
 class SearchBar extends Component {
   state = { term: "" };

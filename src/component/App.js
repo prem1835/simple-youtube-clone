@@ -4,10 +4,13 @@ import youtube from "../apis/youtube";
 import VideoList from "./VideoList";
 import VideoDetail from "./VideoDetail";
 
-const KEY = "AIzaSyAo-xk9f-V9QDwX3rLA7xDHgdKsd_xX4R4";
+const KEY = "AIzaSyA5hvJ7N4rNSNnUaOO_S-HNKGYct6UOn4Q";
 
+// Keys
 // AIzaSyAo-xk9f-V9QDwX3rLA7xDHgdKsd_xX4R4
 // AIzaSyB4e-fshuTUw6cbN2kdmTeIkjTQv8hBZuE
+// AIzaSyA5hvJ7N4rNSNnUaOO_S-HNKGYct6UOn4Q
+
 class App extends Component {
   state = { videos: [], selectedVideo: null };
 
