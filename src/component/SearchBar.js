@@ -5,11 +5,10 @@ class SearchBar extends Component {
   state = { term: "" };
   onInputChange = (e) => {
     this.setState({ term: e.target.value });
-    e.target.blur();
   };
   onFormSubmit = (e) => {
     e.preventDefault();
-
+    e.target.elements.inputField.blur();
     this.props.onFormSubmit(this.state.term);
   };
   render() {
@@ -25,6 +24,7 @@ class SearchBar extends Component {
               value={this.state.term}
               onChange={this.onInputChange}
               placeholder="Video Search"
+              name="inputField"
             />
             <i className="search icon"></i>
           </div>
